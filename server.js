@@ -4,7 +4,7 @@
 var express = require("express"),
 	app = express(),
 	bodyParser = require("body-parser"),
-	mongoURI = process.env.MONGODB_URI || "mongodb://localhost/restaurant_roulette",
+	MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/restaurant_roulette",
 	methodOverride = require("method-override"),
 	mongoose = require("mongoose"),
 	morgan = require("morgan"),
@@ -35,7 +35,7 @@ app.use(methodOverride(function(req, res){
 // ==============================
 // Database
 // ==============================
-mongoose.connect(mongoURI);
+mongoose.connect(MONGODB_URI);
 
 // ==============================
 // Controllers
