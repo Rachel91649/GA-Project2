@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <% include ../views/partials/head.ejs %>
+</head>
+<header>
+ <% include ../views/partials/header.ejs %>  
+</header>
+<body>
+    <h3>New user</h3>
+    <form action="/users" method="POST">
+        <input type="text" name="username" placeholder="Name">
+        <br>
+        <input type="text" name="zipcode" placeholder="zipcode">
+        <br>
+        <button>Submit</button>
+    </form>
+</body>
+</html>

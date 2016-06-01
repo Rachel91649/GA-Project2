@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <% include ../views/partials/head.ejs %>
+</head>
+<header>
+ <% include ../views/partials/header.ejs %>  
+</header>
+<body>
+    <h2>Edit</h2>
+    <a href="/users/<%=users.id%>/search">Back to Search</a>
+    <form action="/users/<%= users.id %>" method="POST" edit="editformid">
+        <input type="text" name="username" value="<%= users.username %>" placeholder="name">
+        <br>
+        <input type="text" name="zipcode" value="<%= users.zipcode %>" placeholder="zipcode">
+        <input type="hidden" name="_method" value="PUT"/>
+        <br>
+        <button>Submit</button>
+    </form>
+</body>
+</html>
