@@ -4,6 +4,9 @@
 }
 
 body {
+	background-image: url(http://i0.wp.com/tulawellnessmd.com/wp-content/uploads/2015/07/Tula_Events_Home_overlay.jpg);
+	background-repeat: no-repeat;
+	background-size: 500px 700px;
 	text-align: center;
 	background-color: white;
 	font-family: papyrus;
@@ -63,7 +66,25 @@ p {
 	font-size: 1.5em;
 }
 
+@media (min-width: 472px){
+	body {
+	background-image: url(http://i0.wp.com/tulawellnessmd.com/wp-content/uploads/2015/07/Tula_Events_Home_overlay.jpg);
+	background-repeat: no-repeat;
+	background-size: 720px 800px;
+	text-align: center;
+	background-color: white;
+	font-family: papyrus;
+	}
+}
 @media (min-width: 721px) {
+	body {
+	background-image: url(http://i0.wp.com/tulawellnessmd.com/wp-content/uploads/2015/07/Tula_Events_Home_overlay.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+	background-color: white;
+	font-family: papyrus;
+	}
 	li {
 		padding: 0;
 		display: inline-block;
