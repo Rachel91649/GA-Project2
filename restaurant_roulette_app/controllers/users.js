@@ -22,10 +22,9 @@ router.get('/', function(req, res) {
 	res.render('index.ejs');
 });
 
-// Get new user page
-// router.get('/newuser', function(req, res) {
-// 	res.render('createuser.ejs');
-// });
+router.get('/normalsearch', function(req, res) {
+ 	res.render('normalsearch.ejs');
+ });
 
 //Get Search Page
 router.get('/:id/search', function(req, res) {
@@ -116,6 +115,21 @@ router.put('/:id', function(req, res) {
 		}
 	});
 });
+
+//post normal search to results page
+router.post('/normalsearch', function(req, res) {
+	var zipcode = req.body.zipcode;
+	var distance = req.body.distance;
+ 	yelp.search({term: 'food', location: zipcode, radius_filter: distance}, function(error, data, body) {
+ 		// console.log('====>err: ', error);
+ 		// console.log('======>body: ', body);
+ 		// response = body;
+ 		//get results Page
+ 		var data = data;
+ 		res.render('normalresults.ejs', {data: data});
+ 	});
+});
+
 //Post search and display on results page
 router.post('/:id/search', function(req, res) { 
 	console.log(req.body);
@@ -126,13 +140,13 @@ router.post('/:id/search', function(req, res) {
 		user = users;
 		console.log(user);
 		yelp.search({term: 'food', location:  zipcode, radius_filter: distance}, 
-		function(error, data, body) {
-		// console.log('===========>Yelp Data Comes Back as an: ', typeof data);
-	  // var data = data;
-	  console.log(data);
-	  console.log(body);		
-		res.render('results.ejs', {data: data, users: user});
-	});
+			function(error, data, body) {
+			// console.log('===========>Yelp Data Comes Back as an: ', typeof data);
+		  // var data = data;
+		  console.log(data);
+		  console.log(body);		
+			res.render('results.ejs', {data: data, users: user});
+		});
 	});
 	// yelp.search({term: 'food', location:  zipcode, radius_filter: distance}, 
 	// 	function(error, data, body) {

@@ -14,11 +14,7 @@
 	<p><%= data.businesses[0].location.city %></p>
 	<p><%= data.businesses[0].location.postal_code %></p>
 	 
-<form action="/users/<%= users.id %>/restaurantupdate" method="POST" edit="editformid">
-        <input type="text" name="restaurantname" value="<%= data.businesses[0].name %>">
-        <input type="hidden" name="_method" value="PUT"/>
-        <br>
-        <button>Save This Restaurant</button>
-    </form>
+
+<a href="/users/normalsearch">Search Again</a>
 </body>
 </html>
