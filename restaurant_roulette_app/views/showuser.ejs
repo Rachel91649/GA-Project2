@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+ <% include ../views/partials/head.ejs %>
 </head>
-<header> 
+<header>
+ <% include ../views/partials/header.ejs %>  
 </header>
-<body id="show"> 
+<body> 
 
     <div id="users-container">
-    	<div>
-    	<p> <%= users.username %></p>
-    	<p> <%= users.zipcode %></p>
-    	<%if(users.restaurantname) {%>
-    		<p> <%= users.restaurantname %></p>
-
-    	<%}%>
-          
+        <div id="users">
+        	<p> <%= users.username %></p>
+        	<p> Zipcode: <%= users.zipcode %></p>
+        	<%if(users.restaurantname) {%>
+    		  <p> Last Restaurant: <%= users.restaurantname %></p>
+    	   <%}%>   
       </div>
     </div>
     <a href="/users/<%=users.id%>/search"> Search</a> 
