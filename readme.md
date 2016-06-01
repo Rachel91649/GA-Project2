@@ -9,13 +9,13 @@ project link:
 This is a description of the app
 
 ###Tech used / Stack:
-*Node.js
-*MongoDB
-*Mongoose
-*Express
-*JavaScript
-*HTML
-*CSS
+*Node.js*
+*MongoDB*
+*Mongoose*
+*Express*
+*JavaScript*
+*HTML*
+*CSS*
 
 ###Features:
 *Full CRUD
