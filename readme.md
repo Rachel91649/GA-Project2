@@ -18,11 +18,11 @@ This is a description of the app
 *CSS*
 
 ###Features:
-*Full CRUD*
-*Responsive Styling*
-*CSS Techniques*
+*Full CRUD*,
+*Responsive Styling*,
+*CSS Techniques*,
 *API Utilization*
 
 ###Future Implementations:
-*Incorporation of cookies to remember users and render the user's show page upon returning to the applicaion.
-*Modify user Schema to push more than one saved restaurant to user.
+*Incorporation of cookies to remember users and render the user's show page upon returning to the applicaion*,
+*Modify user Schema to push more than one saved restaurant to us*er.
