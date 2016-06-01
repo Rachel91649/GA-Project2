@@ -17,16 +17,18 @@ var yelp = new Yelp({//Yelp is a function and I passed the keys as an argument t
 });
 
 //Index - Root page
+//This route gets the index.ejs and renders it
 router.get('/', function(req, res) {
 	console.log("========Index Router is working=======");
 	res.render('index.ejs');
 });
 
+//This route gets the normal search page and renders it
 router.get('/normalsearch', function(req, res) {
  	res.render('normalsearch.ejs');
  });
 
-//Get Search Page
+//This route gets the search page that searches by user id
 router.get('/:id/search', function(req, res) {
 	console.log(req.params.id);
 	Users.findById(req.params.id).then(function(users) {
@@ -40,13 +42,13 @@ router.get('/:id/search', function(req, res) {
 	// res.render('search.ejs', {users});
 });
 
-//get results Page
+//This route gets the results page for searching by user info
 router.get('/results', function(req, res) {
 	console.log("========results router is working=========");
 	res.render('results.ejs');
 });
 
-//Get Create-User Page
+//This route gets the new user page
 //====================================
 router.get('/new', function(req, res) {
 	console.log("=======>Newbie On The Way<======");
@@ -54,7 +56,7 @@ router.get('/new', function(req, res) {
 });
 
 // =======Post and Put Routes =========//
-// Post new user
+// This route posts a new user to the body and saves that user to database
 router.post('/', function(req, res){
 	//grab user data from forms
 	//console.log(req.body);
@@ -80,6 +82,7 @@ router.post('/', function(req, res){
 
 
 //Show user on show page
+//This router gets the show page by id and renders that particular user
 //===================================
 router.get('/:id', function(req, res) {
 	// console.log("=======>user show page is working<=====");
@@ -91,6 +94,7 @@ router.get('/:id', function(req, res) {
 });
 
 //Get Edit User Page
+//This page gets the edit page for the user by id
 //=================================
 router.get('/:id/edit', function(req, res) {
 	console.log("==========making some changes=========");
@@ -100,6 +104,7 @@ router.get('/:id/edit', function(req, res) {
 });
 
 // Update an edit
+// This router puts the new info for the edited user
 //=========================
 router.put('/:id', function(req, res) {
 	console.log(req.body);
@@ -116,7 +121,7 @@ router.put('/:id', function(req, res) {
 	});
 });
 
-//post normal search to results page
+//This router posts the results of a normal search
 router.post('/normalsearch', function(req, res) {
 	var zipcode = req.body.zipcode;
 	var distance = req.body.distance;
@@ -130,7 +135,7 @@ router.post('/normalsearch', function(req, res) {
  	});
 });
 
-//Post search and display on results page
+//This route posts the results of a search by the saved zipcode of user
 router.post('/:id/search', function(req, res) { 
 	console.log(req.body);
 	var zipcode = req.body.zipcode;
@@ -158,6 +163,7 @@ router.post('/:id/search', function(req, res) {
 	// });
 });
 
+//This router puts the name of restaurant on users show page
 router.put('/:id/restaurantupdate', function(req, res){
 	console.log(req.body.restaurantname);
 	var query = {"_id": req.params.id};
