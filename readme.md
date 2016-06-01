@@ -18,10 +18,10 @@ This is a description of the app
 *CSS*
 
 ###Features:
-*Full CRUD
-*Responsive Styling
-*CSS Techniques
-*API Utilization
++Full CRUD
++Responsive Styling
++CSS Techniques
++API Utilization
 
 ###Future Implementations:
 *Imcorporation of cookies to remember users and render the user's show page upon returning to the applicaion.
