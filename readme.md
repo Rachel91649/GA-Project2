@@ -6,7 +6,7 @@
 A FullStack application that allows the user to search for a restaurant via their desired zipcode and distance.  The application accesses yelp's API and returns the restaurant and restaurant's information. Users can choose to create a user name and save their zipcode for all searches, as well as save the last restaurant rendered to their homepage. 
 
 project link:
-This is a description of the app
+[https://my-restaurant-roulette.herokuapp.com/users]
 
 ###Tech used / Stack:
 *Node.js*,
