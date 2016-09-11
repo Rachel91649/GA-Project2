@@ -131,6 +131,7 @@ router.post('/normalsearch', function(req, res) {
  		// response = body;
  		//get results Page
  		var data = data;
+ 		console.log(data);
  		res.render('normalresults.ejs', {data: data});
  	});
 });
